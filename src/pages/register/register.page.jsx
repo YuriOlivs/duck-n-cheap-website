@@ -3,7 +3,7 @@ import { Form } from "../../components/form/form.component";
 import { Input } from "../../components/input/input.component";
 import { Button } from "../../components/button/button.component";
 
-export function LoginPage() {
+export function RegisterPage() {
   return (
     <Container className="flex flex-col items-center justify-center h-screen gap-8">
       <div className="flex flex-col items-center justify-center">
@@ -19,29 +19,27 @@ export function LoginPage() {
           alt=""
         />
       </div>
-      <div />
-      <Form className="w-1/4">
+
+      <Form className="w-1/5">
         <span className="text-3xl font-bold text-left uppercase text-black">
-          Login
+          Cadastro
         </span>
 
-        <Input type="email" placeholder="Email" className={""} />
-        <Input type="password" placeholder="Password" />
+        <span className="font-bold text-left text-black">Crie sua conta</span>
 
-        <a className="self-start text-left font-bold cursor-pointer text-[#949494]">
-          Esqueceu a senha?
-        </a>
+        <Input type="text" placeholder="Nome" />
+        <Input type="email" placeholder="E-mail" />
+        <Input type="password" placeholder="Senha" />
       </Form>
-      <div className="flex flex-col items-center justify-center gap-4 w-full">
-        <Button value="Login" className="w-1/5" />
-        <p>
-          Não tem uma conta?
-          <span className="text-black font-bold cursor-pointer self-start">
-            {" "}
-            Cadastre-se
-          </span>
-        </p>
-      </div>
+
+      <Button value="Cadastrar" className="w-1/5" />
+      <p>
+        Já possui uma conta?
+        <span className="text-black font-bold cursor-pointer self-start">
+          {" "}
+          Faça login
+        </span>
+      </p>
     </Container>
   );
 }
