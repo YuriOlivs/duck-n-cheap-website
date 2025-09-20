@@ -20,7 +20,7 @@ export function RegisterPage() {
         />
       </div>
 
-      <Form className="w-1/5">
+      <Form className="w-1/4">
         <span className="text-3xl font-bold text-left uppercase text-black">
           Cadastro
         </span>
@@ -32,7 +32,7 @@ export function RegisterPage() {
         <Input type="password" placeholder="Senha" />
       </Form>
 
-      <Button value="Cadastrar" className="w-1/5" />
+      <Button value="Cadastrar" className="w-1/4" />
       <p>
         Já possui uma conta?
         <span className="text-black font-bold cursor-pointer self-start">

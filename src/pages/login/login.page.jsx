@@ -5,7 +5,7 @@ import { Button } from "../../components/button/button.component";
 
 export function LoginPage() {
   return (
-    <Container className="flex flex-col items-center justify-center h-screen gap-8">
+    <Container className="flex flex-col items-center justify-center h-screen gap-6">
       <div className="flex flex-col items-center justify-center">
         <img
           className="w-1/5"
@@ -33,7 +33,7 @@ export function LoginPage() {
         </a>
       </Form>
       <div className="flex flex-col items-center justify-center gap-4 w-full">
-        <Button value="Login" className="w-1/5" />
+        <Button value="Login" className="w-1/4" />
         <p>
           Não tem uma conta?
           <span className="text-black font-bold cursor-pointer self-start">
