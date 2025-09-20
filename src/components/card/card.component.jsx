@@ -23,14 +23,15 @@ export function ProductCard({ product }) {
           <img 
           src={product.image} 
           alt="" 
-          className="w-[300px] max-h-[220px] object-cover"
+          className="w-[300px] max-h-[220px] object-cover cursor-pointer"
+          draggable="false"
           />
         </div>
 
         <hr className="border-gray-200"/>
 
         <div className="flex flex-col gap-2 p-4">
-          <h2 className="font-semibold text-sm leading-tight">
+          <h2 className="font-semibold text-sm leading-tight cursor-pointer">
               {product.name}
           </h2>
 
