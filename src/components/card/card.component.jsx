@@ -1,16 +1,11 @@
 import { useState } from "react";
-import { Container } from "../../components/container/container.component";
+import { Container } from "../container/container.component";
 import { HeartIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
 import { storesColors } from "../../utils/store-colors.util";
 
-export function ProductCard({ product }) {
-  const [isFavorite, setIsFavorite] = useState(product.isFavorite);
+export function ProductCard({ product, onToggleFavorite }) {
   const storeConfig = storesColors[product.store.toLowerCase()];
-
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
 
   return (
     <div className="relative w-[320px] p-2">
@@ -42,14 +37,15 @@ export function ProductCard({ product }) {
 
               <motion.button 
               whileTap={{ scale: 0.5 }}
-              className="relative cursor-pointer" onClick={toggleFavorite}
+              className="relative cursor-pointer"
+              onClick={() => onToggleFavorite(product.id)}
               >
                 <HeartIcon 
                 size={32} 
                 weight="fill" 
                 className={`
                   absolute text-black transition-opacity duration-100 ease-in-out 
-                  ${isFavorite ? 
+                  ${product.isFavorite ? 
                     'opacity-100 animate-pop' : 
                     'opacity-0'}
                   `}
