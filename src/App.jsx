@@ -1,5 +1,4 @@
-import { RegisterPage } from './pages/register/register.page'
-import { ProductCard } from './components/card/card.component'
+import { ProductsPage } from './pages/products/products.page'
 
 function App() {
   const product = {
@@ -13,7 +12,7 @@ function App() {
 
   return (
     <>
-      <ProductCard product={product} />
+      <ProductsPage />
     </>
   )
 }

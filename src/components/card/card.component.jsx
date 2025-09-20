@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container } from "../../components/container/container.component";
 import { HeartIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
-import { storesColors } from "../../utils/store-colors";
+import { storesColors } from "../../utils/store-colors.util";
 
 export function ProductCard({ product }) {
   const [isFavorite, setIsFavorite] = useState(product.isFavorite);
@@ -17,7 +17,7 @@ export function ProductCard({ product }) {
       <span className={`absolute px-5 py-1 rounded-md top-0 right-0 z-1 font-semibold ${storeConfig.color} ${storeConfig.textColor}`}>
         {product.store}
       </span>
-      <Container className="relative flex flex-col w-[300px] rounded-2xl border border-gray-200 shadow-sm bg-white">
+      <Container className="relative flex flex-col w-[300px] h-[400px] rounded-2xl border border-gray-200 shadow-sm bg-white">
 
         <div className="flex jstify-center items-center p-3">
           <img 
