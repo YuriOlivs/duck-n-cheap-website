@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Container } from "../../components/container/container.component";
 import { HeartIcon } from "@phosphor-icons/react";
 import { motion } from "motion/react";
+import { storesColors } from "../../utils/store-colors";
 
 export function ProductCard({ product }) {
   const [isFavorite, setIsFavorite] = useState(product.isFavorite);
+  const storeConfig = storesColors[product.store.toLowerCase()];
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
@@ -12,7 +14,7 @@ export function ProductCard({ product }) {
 
   return (
     <div className="relative w-[320px] p-2">
-      <span className="absolute text-white bg-blue-900 px-5 py-1 rounded-md top-0 right-0 z-1">
+      <span className={`absolute px-5 py-1 rounded-md top-0 right-0 z-1 font-semibold ${storeConfig.color} ${storeConfig.textColor}`}>
         {product.store}
       </span>
       <Container className="relative flex flex-col w-[300px] rounded-2xl border border-gray-200 shadow-sm bg-white">
